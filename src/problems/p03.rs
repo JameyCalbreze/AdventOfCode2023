@@ -29,6 +29,7 @@ fn problem_three_part_one(input: &Vec<String>) {
                 collisions.insert(num);
             }
         }
+        row += 1
     }
 
     let mut running_sum = 0;
