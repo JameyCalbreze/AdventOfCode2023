@@ -29,3 +29,28 @@ pub fn get_number_from_str(num_str: &str) -> u64 {
     }
     num
 }
+
+// Read a number from the string and write it to storage on termination
+// will return gracefully from the end of the line
+// returns the number of characters read
+pub fn read_and_store_nums_until_terminator(input: &str, terminator: char, storage: &mut Vec<u64>) -> usize {
+    let mut chars_read = 0;
+
+    let mut num = String::new();
+    for c in input.chars() {
+        if c == terminator { break; }
+        if c >= '0' && c <= '9' {
+            num.push(c);
+        } else if !num.is_empty() {
+            storage.push(get_number_from_str(&num));
+            num.clear();
+        }
+        chars_read += 1
+    }
+
+    if !num.is_empty() {
+        storage.push(get_number_from_str(&num));
+    }
+
+    chars_read
+}

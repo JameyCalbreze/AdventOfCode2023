@@ -28,6 +28,7 @@ fn main() {
     problems::p01::get_solution();
     problems::p02::get_solution();
     problems::p03::get_solution();
+    problems::p04::get_solution();
 }
 
 fn fibonacci(number: usize) -> usize {
