@@ -1,10 +1,3 @@
-extern crate core;
-extern crate core;
-extern crate core;
-extern crate core;
-extern crate core;
-extern crate core;
-
 mod problems;
 pub mod utils;
 use std::{io, string};
