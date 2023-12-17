@@ -14,7 +14,7 @@ pub fn prep_input(file_path: &str) -> Vec<String> {
         let mut s = String::new();
         chars_read = reader.read_line(&mut s).unwrap();
         if chars_read > 0 {
-            input.push(s);
+            input.push(String::from(s.trim()));
         }
     }
 
