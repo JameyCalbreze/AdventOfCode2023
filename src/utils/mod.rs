@@ -20,3 +20,12 @@ pub fn prep_input(file_path: &str) -> Vec<String> {
 
     input
 }
+
+pub fn get_number_from_str(num_str: &str) -> u64 {
+    let mut num: u64 = 0;
+    for c in num_str.chars() {
+        num *= 10;
+        num += u64::from(c.to_digit(10).unwrap());
+    }
+    num
+}
