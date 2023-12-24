@@ -74,7 +74,7 @@ fn problem_three_part_two(input: &Vec<String>) -> u64 {
         row += 1
     }
 
-    println!("Problem 3 Part 1: The sum of gear ratios is {}", running_sum);
+    println!("Problem 3 Part 2: The sum of gear ratios is {}", running_sum);
 
     running_sum
 }

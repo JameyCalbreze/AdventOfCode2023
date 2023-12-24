@@ -54,3 +54,19 @@ pub fn read_and_store_nums_until_terminator(input: &str, terminator: char, stora
 
     chars_read
 }
+
+/**
+ * Find the middle value between two numbers
+ * 
+ * At the moment this function assumes both numbers are positive
+ */
+pub fn get_middle_value(min_val: i64, max_val: i64) -> i64 {
+    // Check if sum is odd
+    let mut total = min_val + max_val;
+
+    if total % 2 == 1 {
+        total += 1;
+    }
+
+    total / 2
+}
