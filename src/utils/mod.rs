@@ -70,3 +70,22 @@ pub fn get_middle_value(min_val: i64, max_val: i64) -> i64 {
 
     total / 2
 }
+
+/**
+ * For simplicity this assumes that each of these strings are the same length
+ */
+pub fn count_char_diff_between_strings(s1: &str, s2: &str) -> usize {
+    let mut differences = 0;
+    let length = s1.len();
+
+    let mut chars1 = s1.chars();
+    let mut chars2 = s2.chars();
+
+    for _ in 0..length {
+        if !chars1.next().unwrap().eq(&chars2.next().unwrap()) {
+            differences += 1;
+        }
+    }
+
+    differences
+}
